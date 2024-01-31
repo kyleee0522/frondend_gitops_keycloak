@@ -8,7 +8,7 @@ metadata:
     ingress.kubernetes.io/rewrite-target: /    
 spec:
   rules:
-  - host: frontend.211.43.12.162.nip.io
+  - host: frontend.10150393.duckdns.org
     http:
       paths:
       - path: /
