@@ -20,6 +20,6 @@ spec:
         imagePullPolicy: Always
         env:
           - name: BACKEND_API_URL
-            value: "employee-backend" 
+            value: "backend-springboot" 
         ports:
         - containerPort: 80
