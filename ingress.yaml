@@ -6,8 +6,8 @@ metadata:
   annotations:
 #    kubernetes.io/ingressClassName: traefik
    kubernetes.io/ingressClassName: “nginx”
-    ingressclass.kubernetes.io/is-default-class: “true”
-    ingress.kubernetes.io/rewrite-target: /    
+   ingressclass.kubernetes.io/is-default-class: “true”
+   ingress.kubernetes.io/rewrite-target: /    
 spec:
   rules:
   - host: frontend.211.43.12.162.nip.io
