@@ -7,11 +7,11 @@ spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: canary
+      app: canary-front
   template:
     metadata:
       labels:
-        app: canary
+        app: canary-front
     spec:
       containers:
       - name: canary-rollouts-front
@@ -30,10 +30,10 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: canary-service
+  name: canary-front-service
 spec:
   selector:
-    app: canary
+    app: canary-front
   ports:
   - protocol: TCP
     port: 80
