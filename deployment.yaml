@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        // image: hoooo/frontend_0131
+        # image: hoooo/frontend_0131
         image: ghcr.io/shclub/vue3:v1
         imagePullPolicy: Always
         env:
