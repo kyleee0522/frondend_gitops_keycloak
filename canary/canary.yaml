@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: canary-rollout
 spec:
-  replicas: 8
+  replicas: 4
   revisionHistoryLimit: 2
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
         app: canary
     spec:
       containers:
-      - name: canary-rollouts-demo
+      - name: canary-rollouts-front
         image: particule/simplecolorapi:1.0
         imagePullPolicy: Always
         ports:
