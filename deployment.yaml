@@ -20,6 +20,6 @@ spec:
         imagePullPolicy: Always
         env:
           - name: BACKEND_API_URL
-            value: "backend-keycloak:80" 
+            value: "backend-keycloak:8080" 
         ports:
         - containerPort: 80
