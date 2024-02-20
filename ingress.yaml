@@ -7,8 +7,8 @@ metadata:
     ingressclass.kubernetes.io/is-default-class: "true"
 spec:
   rules:
-  - host: frontkey.211.43.12.162.nip.io
-    http:
+  - host: 10150393.duckdns.org
+    https:
       paths:
       - path: /
         pathType: Prefix
@@ -16,4 +16,4 @@ spec:
           service:
             name: frontend-keycloak
             port:
-              number: 80
+              number: 443
