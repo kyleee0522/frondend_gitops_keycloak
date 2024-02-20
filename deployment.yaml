@@ -15,12 +15,11 @@ spec:
         app: frontend-keycloak
     spec:
       containers:
-      - name: frontend-keycloak
-        # image: hoooo/frontend_0131
+      - name: frontend-keycloak        
         image: ghcr.io/kyleee0522/vue_crud_security_keycloak:v1
         imagePullPolicy: Always
         env:
           - name: BACKEND_API_URL
-            value: "backend-keycloak" 
+            value: "backend-keycloak:80" 
         ports:
         - containerPort: 80
