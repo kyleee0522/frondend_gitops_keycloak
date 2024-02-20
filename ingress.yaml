@@ -1,13 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: frontend-keycloak-ingress
-#  name: traefik-routers
+  name: frontend-keycloak
   annotations:
-#   kubernetes.io/ingress.class: "traefik"
-   kubernetes.io/ingressClassName: “nginx”
-#   ingressclass.kubernetes.io/is-default-class: “true”
-#   ingress.kubernetes.io/rewrite-target: /    
+    kubernetes.io/ingressClassName: "nginx"
+    ingress.kubernetes.io/rewrite-target: /
+    ingressclass.kubernetes.io/is-default-class: "true"
 spec:
   rules:
   - host: frontendkeycloak.211.43.12.162.nip.io
@@ -19,4 +17,4 @@ spec:
           service:
             name: frontend-keycloak
             port:
-              number: 80
+              number: 8080
