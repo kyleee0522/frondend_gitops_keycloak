@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: frontend-keycloak
+  name: frontend-keycloak-ssl
   annotations:
     kubernetes.io/ingressClassName: "nginx"
     ingressclass.kubernetes.io/is-default-class: "true"
@@ -14,6 +14,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: frontend-keycloak
+            name: frontend-keycloak-ssl
             port:
               number: 80
