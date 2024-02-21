@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-keycloak
+  name: frontend-keycloak-ssl
   labels:
-    app: frontend-keycloak
+    app: frontend-keycloak-ssl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend-keycloak
+      app: frontend-keycloak-ssl
   template:
     metadata:
       labels:
-        app: frontend-keycloak
+        app: frontend-keycloak-ssl
     spec:
       containers:
-      - name: frontend-keycloak     
-        image: ghcr.io/kyleee0522/vue_crud_security_keycloak:v3
+      - name: frontend-keycloak-ssl 
+        image: ghcr.io/kyleee0522/vue_crud_security_keycloak:v4
         imagePullPolicy: Always
         env:
           - name: BACKEND_API_URL
-            value: "backend-keycloak" 
+            value: "backend-keycloak-ssl" 
         ports:
         - containerPort: 80
